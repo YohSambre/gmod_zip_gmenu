@@ -32,6 +32,17 @@ if SAM_LOADED then
 	saminfosOption:SetIcon("icon16/book_addresses.png")
 end
 	---------------------------------------------------------------
+	-- SERVERGUARD | Admin Mod > https://www.gmodstore.com/market/view/serverguard
+if SERVERGUARD then
+	local subMenu, mainmenuOption = mainmenu:AddSubMenu("SERVERGUARD")
+	mainmenuOption:SetIcon("icon16/application_view_list.png")
+	local samOption = subMenu:AddOption("Open serverguard admin menu", function() surface.PlaySound( "buttons/blip1.wav" ) LocalPlayer():ConCommand("+serverguard_menu") end)
+	samOption:SetIcon("icon16/bullet_key.png")
+
+	local saminfosOption = subMenu:AddOption("original link of the addon", function() gui.OpenURL( "https://www.gmodstore.com/market/view/serverguard" ) end)
+	saminfosOption:SetIcon("icon16/book_addresses.png")
+end
+	---------------------------------------------------------------
 	-- GmodAdminSuite | Menu Mod > https://steamcommunity.com/sharedfiles/filedetails/?id=1595332211
 if concommand.GetTable()["gmodadminsuite"] then
 	local subMenu, mainmenuOption = mainmenu:AddSubMenu("GmodAdminSuite")

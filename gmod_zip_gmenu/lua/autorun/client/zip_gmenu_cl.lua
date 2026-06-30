@@ -36,11 +36,11 @@ end
 if SERVERGUARD then
 	local subMenu, mainmenuOption = mainmenu:AddSubMenu("SERVERGUARD")
 	mainmenuOption:SetIcon("icon16/application_view_list.png")
-	local samOption = subMenu:AddOption("Open serverguard admin menu", function() surface.PlaySound( "buttons/blip1.wav" ) LocalPlayer():ConCommand("+serverguard_menu") end)
-	samOption:SetIcon("icon16/bullet_key.png")
+	local serverguardOption = subMenu:AddOption("Open serverguard admin menu", function() surface.PlaySound( "buttons/blip1.wav" ) LocalPlayer():ConCommand("+serverguard_menu") end)
+	serverguardOption:SetIcon("icon16/bullet_key.png")
 
-	local saminfosOption = subMenu:AddOption("original link of the addon", function() gui.OpenURL( "https://www.gmodstore.com/market/view/serverguard" ) end)
-	saminfosOption:SetIcon("icon16/book_addresses.png")
+	local serverguardinfosOption = subMenu:AddOption("original link of the addon", function() gui.OpenURL( "https://www.gmodstore.com/market/view/serverguard" ) end)
+	serverguardinfosOption:SetIcon("icon16/book_addresses.png")
 end
 	---------------------------------------------------------------
 	-- GmodAdminSuite | Menu Mod > https://steamcommunity.com/sharedfiles/filedetails/?id=1595332211
